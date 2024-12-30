@@ -4,6 +4,7 @@ const app = express()
 
 app.use(express.json())
 
+app.use(express.static('dist'))
 //created token post_data that returns the json that the client posts
 morgan.token("post_data", (req, res) => {
     return (
